@@ -1,2 +1,30 @@
 <p>{{pin}}</p>
 <p>{{status}}</p>
+<div>
+	{% for country in full_detail %}
+    <option name="{{country}}">{{country}}</option>
+{% endfor %}
+</div>
+
+
+<table>
+<tr>
+  <th>header1</th>
+  <th>header2</th>
+  <th>header3</th>
+  <th>header4</th>
+</tr>
+{% for r in full_detail %}
+<tr>
+  <th> {{ r.date_list }}</th>
+  <th> {{ r.house }}</th>
+  <th> {{ r.street }}</th>
+  <th> {{ r.tehsil }}</th>
+  
+</tr> 
+{% endfor %}
+</table>
+<!-- <p>{{date_list}}</p>
+<p>{{house}}</p>
+<p>{{street}}</p>
+<p>{{tehsil}}</p> -->
